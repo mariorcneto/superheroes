@@ -1,0 +1,33 @@
+﻿@using SuperHeroes.Controllers
+@model SuperHeroes.Models.User
+<div id="pageBody">
+    <div id="login">
+        <div>
+            Identifique-se @ViewBag.Message!!!
+        </div>
+        <div id="id">
+            <span>Quem é você?</span><span>Qual é a senha?</span>   
+        </div>
+        <div>
+            <span>
+                @Html.TextBoxFor(model => model.name, new{size = "19"})
+            </span>
+            <span>
+                @Html.TextBoxFor(model => model.password, new { size = "19", type = "password"})
+            </span>
+        </div>
+			
+        <div class="float">
+            <a href="@Url.Action("Login","Home", new{ name=Model.name, password=Model.password})" class="float">Acessar</a>
+        </div>
+        @{
+            if (ViewBag.login != null && !ViewBag.login)
+            {
+                <div id="wrongPass" class="float">
+                    Senha Incorreta!
+                </div>
+            }
+        }
+        
+    </div>
+</div>

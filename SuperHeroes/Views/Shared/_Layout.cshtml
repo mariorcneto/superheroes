@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    @*@Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content//reset.css")
+    @Styles.Render("~/Content/main.css")
+    @Styles.Render("~/Content/login.css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link href="https://fonts.googleapis.com/css?family=Teko|Orbitron|Turret+Road&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>    
+    <div id="mask"></div>
+    <div class="titleWrapper">
+        <div class="titleLine">Universal</div>
+        <div class="titleLine big">Super Heroes</div>
+        <div class="titleLine">Collection</div>
+    </div>
+</header>
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <span>PISO 2019</span> - No Rights Reserved!
+        </footer>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>
